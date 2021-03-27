@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
    pageTitile = 'Product List';
    imageWidth = 50.0;
    imageMargin = 2.0;
+   showImage = false;
    products: any[] = [
     {
       "productId": 1,
@@ -63,5 +64,8 @@ import { Component, OnInit } from '@angular/core';
    ];
    constructor() { }
 
+   toggleImage(): void {
+     this.showImage = !this.showImage;
+   }
    ngOnInit() { }
  }
