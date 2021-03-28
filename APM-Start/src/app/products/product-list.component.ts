@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from './product';
 
  @Component({
    selector: 'pm-products',
-   templateUrl: './product-list.component.html'
+   templateUrl: './product-list.component.html',
+   styleUrls: ['./product-list.component.css']
  })
 
  export class ProductListComponent implements OnInit {
@@ -11,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
    imageMargin = 2.0;
    showImage = false;
    filterValue: string = 'cart';
-   products: any[] = [
+   products: IProduct[] = [
     {
       "productId": 1,
       "productName": "Leaf Rake",
