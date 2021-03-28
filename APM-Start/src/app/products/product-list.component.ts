@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
    imageWidth = 50.0;
    imageMargin = 2.0;
    showImage = false;
+   filterValue: string = 'cart';
    products: any[] = [
     {
       "productId": 1,
