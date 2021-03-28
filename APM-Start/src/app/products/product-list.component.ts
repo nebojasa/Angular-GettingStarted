@@ -70,5 +70,7 @@ import { IProduct } from './product';
    toggleImage(): void {
      this.showImage = !this.showImage;
    }
-   ngOnInit() { }
+   ngOnInit() {
+     console.log('In OnInit')
+   }
  }
