@@ -12,7 +12,18 @@ import { IProduct } from './product';
    imageWidth = 50.0;
    imageMargin = 2.0;
    showImage = false;
-   filterValue: string = 'cart';
+   _filterValue: string = '';
+
+
+   public get filterValue() : string {
+     return this._filterValue;
+   }
+
+   public set filterValue(v : string) {
+     this._filterValue = v;
+     console.log('In setter:', v);
+   }
+
    products: IProduct[] = [
     {
       "productId": 1,
@@ -72,5 +83,6 @@ import { IProduct } from './product';
    }
    ngOnInit() {
      console.log('In OnInit')
+     this.filterValue = 'cart'
    }
  }
