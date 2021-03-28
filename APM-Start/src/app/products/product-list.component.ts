@@ -21,9 +21,11 @@ import { IProduct } from './product';
 
    public set filterValue(v : string) {
      this._filterValue = v;
+     this.filteredProducts = this.performFiltering(v);
      console.log('In setter:', v);
    }
 
+   filteredProducts: IProduct[] = [];
    products: IProduct[] = [
     {
       "productId": 1,
@@ -81,6 +83,13 @@ import { IProduct } from './product';
    toggleImage(): void {
      this.showImage = !this.showImage;
    }
+
+   performFiltering(filterBy: string): IProduct[] {
+     filterBy = filterBy.toLocaleLowerCase();
+     return this.products.filter((product:IProduct) => product.productName.toLocaleLowerCase().includes(filterBy));
+    throw new Error('Method not implemented.');
+  }
+
    ngOnInit() {
      console.log('In OnInit')
      this.filterValue = 'cart'
