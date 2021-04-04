@@ -9,10 +9,9 @@ import { Component, Input, OnChanges, SimpleChanges, EventEmitter, Output } from
 export class StarComponent implements OnChanges {
     
     @Input() rating: number = 0.0;
+    @Output() ratingClicked: EventEmitter<string> = new EventEmitter<string>();
     
     cropWidth: number = 75.0;
-    
-    @Output()  ratingClicked: EventEmitter<string> = new EventEmitter<string>();
     
     ngOnChanges(): void
     {
@@ -21,7 +20,6 @@ export class StarComponent implements OnChanges {
 
     onClick(): void 
     {
-        
         this.ratingClicked.emit(`Star rating is: ${this.rating} was tapped!!`)
     }
 }

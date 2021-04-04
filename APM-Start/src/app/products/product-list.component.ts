@@ -78,6 +78,7 @@ import { IProduct } from './product';
       "imageUrl": "assets/images/xbox-controller.png"
     }
    ];
+   
    constructor() { }
 
    toggleImage(): void {
