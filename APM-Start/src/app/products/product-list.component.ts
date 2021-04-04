@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { IProduct } from './product';
 
  @Component({
@@ -93,5 +93,9 @@ import { IProduct } from './product';
    ngOnInit() {
      console.log('In OnInit')
      this.filterValue = 'cart'
+   }
+
+   onRatingClickedEvent(message: string): void {
+     this.pageTitile = 'Product list: ' + message;
    }
  }
