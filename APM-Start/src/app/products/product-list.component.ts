@@ -4,7 +4,6 @@ import { IProduct } from './product';
 import { ProductService } from './product.service';
 
  @Component({
-   selector: 'pm-products',
    templateUrl: './product-list.component.html',
    styleUrls: ['./product-list.component.css']
  })
@@ -61,9 +60,7 @@ import { ProductService } from './product.service';
 
     ngOnDestroy(): void 
     {
-      this.sub.unsubscribe(
-        
-      )
+      this.sub.unsubscribe()
     }
 
    onRatingClickedEvent(message: string): void {
