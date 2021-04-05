@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
   selector: 'pm-root',
   template: `
   <nav class = 'navbar navbar-expand navbar-light bg-light'>
-    <a class = 'navbar-brand'>{{pageTitie}}</a>
+    <a class = 'navbar-brand'>{{pageTitle}}</a>
     <ul class = 'nav nav-pills'>
       <li><a class = 'nav-link' routerLink = '/welcome'> Home </a></li>
       <li><a class = 'nav-link' routerLink = '/products'> Product List </a></li>
@@ -12,8 +12,9 @@ import { Component } from "@angular/core";
   </nav>
   <div class = 'container'>
     <router-outlet></router-outlet>
-  </div>`
+  </div>
+  `
 })
 export class AppComponent {
-  public pageTitie: string = 'Acmee product managment';
+  public pageTitle: string = 'Acmee product managment';
 }
